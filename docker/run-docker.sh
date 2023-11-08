@@ -7,7 +7,7 @@ SAVE_DIR="/home/$USER/project/workspace/rvt"
 
 docker run -it --rm --ipc=host --gpus all \
   --name rvt-env \
-  -v "${SCRIPT_DIR}":"/home/$USER/RVT" \
+  -v "${SCRIPT_DIR}/..":"/home/$USER/RVT" \
   -v /datasets/$USER:/dataset \
   -v ${SAVE_DIR}:${WORK_DIR} \
   ${IMAGE_NAME}
